@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/cadastro.css">
+
+    <script src="https://kit.fontawesome.com/782e4cfd7d.js" crossorigin="anonymous"></script>
+
+    <script src="js/cadastro.js"></script>
+
+    <title> Omicron - cadastro </title>
+</head>
+<body>
+
+    <nav>
+        <div class="navbar">
+            <h1 class="navbar-title nav"> Cadastro </h1>
+            <p class="navbar-item sub nav"> Bem vindo a Página de cadastro </p>
+            
+            <p class="navbar-item nav"> Digite um usuário com mais de 4 dígitos:</p>
+            <input id="usuario" class="navbar-item bar nav" type="text">
+            
+            <p class="navbar-item nav"> Digite uma senha com mais de 6 dígitos: </p>
+            <input id="senha1" class="navbar-item bar nav" type="text">
+
+            
+            <p class="navbar-item nav"> Digite sua senha novamente: </p>
+            <input id="senha2" class="navbar-item bar nav" type="text">
+
+            <div class="navbar-item nav check-container">
+                <p> Checagem de segurança </p>
+                <span id="check" class="fas fa-check-double"></span>
+            </div>
+
+            <button onclick="cadastro()" class="navbar-item btn nav"> Cadastrar </button>
+
+        </div>
+    </nav>  
+
+</body>
+
+
+</html>

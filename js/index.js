@@ -1,9 +1,6 @@
 let menu = '';
 let i = 0;
 
-
-
-
 function esmaecer()
 {
     for(i = 0; i < 8; i++)
