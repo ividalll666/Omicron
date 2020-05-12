@@ -29,8 +29,8 @@ function cadastro()
     senha2 = document.getElementById('senha2').value;
 
 
-    //validacão
-    if (usuario != null && usuario.length > 4)
+    //validacãoConsole.WriteLine();
+    if (usuario != null && usuario.length >= 4)
     {
         if(senha1 != null && senha1.length >= 7 )
         {

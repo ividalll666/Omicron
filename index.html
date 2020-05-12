@@ -10,7 +10,7 @@
 
     <script src="js/index.js"></script>
 
-    <title> Login </title>
+    <title> Omicron - Login </title>
 </head>
 <body>
 
@@ -21,14 +21,18 @@
             <h1 class="navbar-title nav"> Login </h1>
 
             <p class="navbar-item nav"> Usuário:</p>
-            <input class="navbar-item bar nav" type="text">
+            <input id="usuario" class="navbar-item bar nav" type="text">
             
             <p class="navbar-item nav"> Senha: </p>
-            <input class="navbar-item bar nav" type="text">
+            <input id="senha" class="navbar-item bar nav" type="password">
 
-            <button onclick="esmaecer()" class="navbar-item btn nav"> Entrar</button>
+            <button onclick="Checagem()" class="navbar-item btn nav">Entrar</button>
 
-            <p class="navbar-item cad nav"> Ainda não é cadastrado? <span onclick="window.location.href=''"> <b>Cadastre-se</b></span> </p>
+            <div class="navbar-item nav container-status">
+                <div id="status"></div>
+            </div>
+
+            <p class="navbar-item cad nav"> Ainda não é cadastrado? <span onclick ="esmaecer(), cadastro()"> <b>Cadastre-se</b></span> </p>
 
         </div>
     </nav>  

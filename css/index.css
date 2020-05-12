@@ -96,6 +96,7 @@ input.navbar-item
 .bar
 {
     width: 10%;
+    text-align: center;
 }
 
 .navbar:hover .bar
@@ -199,6 +200,42 @@ input.navbar-item
     opacity: 0;
 }
 
+.container-status
+{
+    overflow: hidden;
+}
+
+.container-status:hover #status
+{
+    animation: status;
+}
+
+#status
+{
+    font-size: 1rem;
+    color: red;
+    transform: translateY(-200%);
+}
+
+@keyframes status
+{
+    0%
+    {
+        transform: translateY(-200%);   
+    }
+    20%
+    {
+        transform: translateY(0%);
+    }
+    80%
+    {
+        transform: translateY(0%);
+    }
+    100%
+    {
+        transform: translateY(-200%);   
+    }
+}
 
 
 
