@@ -5,6 +5,11 @@
     box-sizing: border-box;
 }
 
+html
+{
+   background-color:  #801336;
+}
+
 :root
 {
     font-size: 1vw;
@@ -38,8 +43,6 @@
 
     z-index: 5;
 
-    animation: navbar-interaction 3s normal;
-
 }
 
 .navbar:hover
@@ -47,55 +50,6 @@
     width: 40%;
     cursor: pointer;
 }
-
- @keyframes navbar-interaction
-{
-    0%
-    {   
-        width: 40%;
-    }
-
-    100%
-    {
-        width: 10%;
-    }
-} 
-
-.bv
-{
-    animation: navbar-bv 2.5s normal;
-}
-
-@keyframes navbar-bv
-{
-    0%
-    {
-        opacity: 0;
-    }
-
-    50%
-    {
-        opacity: 1;
-    }
-
-    100%
-    {
-        opacity: 0;
-    }
-}
-
-@keyframes opc
-{
-    0%
-    {
-        opacity: 1;
-    }
-    100%
-    {
-        opacity: 0;
-    }
-}
-
 
 .navbar:hover .fa-angle-left
 {
@@ -118,7 +72,6 @@
     transition: .5s;
 
 }
-
 .navbar-item:hover
 {
     transform: scale(1.4);
@@ -128,10 +81,7 @@
 {
     opacity: 1;
 }
-
 /* main */
-
-
 main.conteudo
 {
     display: grid;
@@ -148,18 +98,12 @@ main.conteudo
     color: white;
 }
 
-/* PLAYER E SUAS CONFIGS */ 
-
 .player
 {
     grid-column: 1/2;
     background-color:  var(--color-one);
 
 }
-
-/* CONFIGS DA LISTAGEM DE MÚSICAS */
-
-/* aba da listagem - geral */
 
 .listagem
 {
@@ -176,77 +120,97 @@ main.conteudo
     font-size: .8rem;
 }
 
-.escolha
-{
-    font-size: 1.2rem;
-    padding-top: 5%;
-}
+/* Como Funciona: */
 
-.escolha h1
-{
-    font-size: 2rem;
-
-    margin-bottom: 10%;
-}
-
-/* selecao de player */
-
-.selecao-player
+.perfil
 {
     display: flex;
-    margin-top: 5%;
-    margin-bottom: 5%;
-    height: 5%;
-}
+    flex-direction: column;
+    position: absolute;
 
-.selecao-player button
-{
-    font-size: 1.5rem;
-    color: white;
-    background-color: var(--color-two);
-    border: 0px solid white;
-}
-
-
-.selecao-player:hover .player-item
-{
-    height: 100%;
-    width: 100%;
-    opacity: 1;
-
-    cursor: pointer;
-}
-
-.player-item
-{
-    padding: 3%;
-    opacity: 0;
-    height: 0%;
     width: 0%;
+    height: 0%;
+    top: 0;
+    right: 0;
 
-    transition: .2s;
+    z-index: 4;
+
+    animation: perfil 1.2s ease-out forwards;
+
+    background-color: var(--color-two);
+
+    padding-right: 5%;
 }
 
-button:hover
+@keyframes perfil
 {
-    transform: scale(1.2);
+    0%
+    {
+        height: 100%;
+        width: 0%;
+        top: 0;
+        right: 0;
+
+    }
+
+
+    100%
+    {
+        height: 100%;
+        width: 100%;
+        top: 0;
+        right: 0;
+
+    }
 }
 
-.fa-arrows-alt-h
+#perfil
 {
-    width: 100%;
-    opacity: 1;
-    background-color: var(--color-three);
-}
-
-/* Descricao e tabelas */
-
-.desc
-{
+    animation-name: carregamento;
+    animation-delay: 2s;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    
+    padding: 3%;
     text-align: justify;
-    font-size: 1rem;
 
-    margin-bottom: 5%;
+    height: 100%;
+}
+
+@keyframes carregamento
+{
+    0%
+    {   
+        opacity: 0%;
+    }
+
+    100%
+    {
+        opacity:100%;
+    }
+} 
+
+
+
+.perfil h1
+{
+    font-size: 3rem;
+}
+
+.perfil h2
+{
+    margin-top: 2%;
+    margin-bottom: .8%;
+
+}
+
+#playlists
+{
+    width: 15%;
+    background-color: var(--color-three);
+    color: white;
+    padding: .5%;
 }
 
 .tabela
@@ -254,7 +218,8 @@ button:hover
     width: 100%;
     background-color: #ee4540;
 
-    margin-bottom: 10%;
+    margin-top: 2%;
+    margin-bottom: 2.3%;
 
     color: white;
 }
@@ -275,10 +240,31 @@ td
     padding: 5%;
 }
 
-#atalho
+/* importancão */
+
+.imp
 {
-    font-weight: bold;
-    cursor: pointer;
+    margin-top: 2%;
+    margin-bottom: .5%;
 }
 
-/* Como Funciona: */
+.perfil input
+{
+    
+    width: 15%;
+    background-color: var(--color-three);
+    color: white;
+    padding: .5%;
+    border: 1px solid white;
+}
+
+#acesso
+{
+    width: 1%;
+}
+
+#arquivo
+{
+    margin-bottom: 5%;
+    width: 20%;
+}

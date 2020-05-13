@@ -51,7 +51,7 @@ let i = 0;
 //funcão que esmaece (aumenta a transparência dos elementos)
 function esmaecer()
 {
-    for(i = 0; i < 8; i++)
+    for(i = 0; i < 9; i++)
     {
         menu = document.getElementsByClassName('nav')[i]; 
         menu.style.animation = '1s ease 0s normal forwards opc';
