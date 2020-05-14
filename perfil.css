@@ -1,0 +1,298 @@
+*
+{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+html
+{
+   background-color:  #801336;
+}
+
+:root
+{
+    font-size: 1vw;
+    font-family: 'Century Gothic';
+    --color-one: #2d132c;
+    --color-two: #801336;
+    --color-three: #c72c41;
+    --color-four: #ee4540;
+}
+
+.navbar
+{
+    position: fixed;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    list-style: none;
+    text-decoration: none;
+
+    background-color: var(--color-two);
+
+    font-size: 1.7rem;
+
+    width: 10%;
+    height: 100%;
+
+    transition: .8s;
+
+    z-index: 5;
+
+}
+
+.navbar:hover
+{
+    width: 40%;
+    cursor: pointer;
+}
+
+.navbar:hover .fa-angle-left
+{
+    transform: rotate(-90deg);
+}
+
+
+.navbar:hover .navbar-item
+{
+    opacity: 1;
+}
+
+.navbar-item
+{
+    color: white;
+    padding: 3%;
+
+    opacity:0 ;
+
+    transition: .5s;
+
+}
+.navbar-item:hover
+{
+    transform: scale(1.4);
+}
+
+.fa-angle-left
+{
+    opacity: 1;
+}
+/* main */
+main.conteudo
+{
+    display: grid;
+
+    margin-right: 12%;
+    grid-template-columns: 2fr 1fr;
+
+    position: absolute;
+    height: 100%;
+    width: 91%;
+
+    z-index: 1;
+
+    color: white;
+}
+
+.player
+{
+    grid-column: 1/2;
+    background-color:  var(--color-one);
+
+}
+
+.listagem
+{
+    grid-column: 2/3;
+    background-color: var(--color-two);
+
+    text-align: center;
+
+    overflow-y: scroll;
+
+    padding-right: 5%;
+    padding-left: 5%;
+
+    font-size: .8rem;
+}
+
+/* Como Funciona: */
+
+.perfil
+{
+    display: block;
+    position: absolute;
+
+    width: 0%;
+    height: 0%;
+    top: 0;
+    right: 0;
+
+    z-index: 4;
+
+    animation: perfil 1.2s ease-out forwards;
+
+    background-color: var(--color-two);
+
+    padding-right: 5%;
+}
+
+@keyframes perfil
+{
+    0%
+    {
+        height: 100%;
+        width: 0%;
+        top: 0;
+        right: 0;
+
+    }
+
+
+    100%
+    {
+        height: 100%;
+        width: 100%;
+        top: 0;
+        right: 0;
+
+    }
+}
+
+#perfil
+{
+    animation-name: carregamento;
+    animation-delay: 2s;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    
+    padding: 3%;
+    height: 100%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 5%;
+}
+
+@keyframes carregamento
+{
+    0%
+    {   
+        opacity: 0%;
+    }
+
+    100%
+    {
+        opacity:100%;
+    }
+} 
+
+#ladoA
+{
+    grid-column: 1/2;
+    grid-row: 1/3;
+    text-align: justify;
+}
+
+#ladoB
+{
+    grid-column: 2/3;
+    grid-row: 1/3;  
+    text-align: center;
+
+}
+
+.perfil h1
+{
+    font-size: 3rem;
+}
+
+.perfil h2
+{
+    margin-top: 5%;
+    margin-bottom: .8%;
+
+}
+
+#playlists
+{
+    width: 25%;
+    background-color: var(--color-three);
+    color: white;
+    padding: .5%;
+}
+
+.tabela
+{
+    width: 100%;
+    background-color: #ee4540;
+
+    margin-top: 2%;
+    margin-bottom: 2.3%;
+
+    color: white;
+
+    overflow-y: scroll;
+}
+
+.linha-titulo
+{
+    background-color: var(--color-three);
+    justify-content: center;
+
+}
+.linha
+{
+    background-color: var(--color-four);
+}
+
+td
+{
+    padding: 5%;
+}
+
+/* importancão */
+
+#ladoB #subtitulo
+{
+    margin-bottom: 5%;
+}
+
+#ladoB h2
+{
+    margin-bottom: 2%;
+}
+
+.imp
+{
+    margin-top: 2%;
+    margin-bottom: .5%;
+}
+
+.perfil input
+{
+    
+    width: 50%;
+    background-color: var(--color-three);
+    color: white;
+    padding: .5%;
+    border: 1px solid white;
+}
+
+#acesso
+{
+    width: 10%;
+}
+
+#arquivo
+{
+    margin-bottom: 5%;
+    width: 50%;
+}
