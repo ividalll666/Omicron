@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="css/perfil.css">
     <script src="https://kit.fontawesome.com/782e4cfd7d.js" crossorigin="anonymous"></script>
 
+    <script src="js/perfil.js"></script>
+
     <title> Omicron - Perfil </title>
 </head>
 <body>
@@ -45,6 +47,7 @@
                     <p> Playlist mais tocada:    <span id="PMT"> nomenome</span></p>
                     
                     <h2>Suas músicas:</h2>
+                    <p>Role para baixo caso não ache.</p>
 
                     <select name="playlists" id="playlists">
                         <option value="Oculto"> Ocultar </option>
@@ -56,6 +59,7 @@
                     <table class="tabela">
                         <tr class="linha-titulo"> <td>Artista/autor-video   </td> </tr>
                         <tr class="linha">        <td>       //             </td> </tr>
+
                     </table>
                     
                 </div>
@@ -64,22 +68,37 @@
                     <h1>upload de conteúdo</h1>
                     <p id="subtitulo"> Importe conteúdo por link, ou do seu computador.  </p>
 
-                    <h2 class="imp"> Coloque o nome </h2>
-                    <input type="text">
+                    <div class="up">
+                        <h2 class="imp"> Coloque o nome </h2>
+                        <input  id="nome" type="text">
 
-                    <h2 class="imp">Uma breve descrição</h2>
-                    <input type="text">
+                        <h2 class="imp">Uma breve descrição</h2>
+                        <input id="desc" type="text">
+                        
+                        <h2 class="imp">Selecione a mídia:</h2>
+                        <input type="file"  name="arquivo" id="arquivo">
 
-                    
-                    <h2 class="imp">Selecione o arquivo de mídia:</h2>
-                    <input type="file"  name="arquivo" id="arquivo">
-                    
-                    <h2 class="imp"> Ou importe por link:</h2>
-                    <input type="url">
+                        <div class="container-up">
+                            <label id="icon-manual" class="fas fa-photo-video"></label>
+                        </div>
+                    </div>
+
+                    <div class="up">
+                        <h2 class="imp"> Ou importe por link:</h2>
+                        <input type="url" class="fas fa-link">
+
+                        <div class="container-up">
+                            <label class="fas fa-link"></label>
+                        </div>
+                    </div>
 
                     <h2 class="imp"> Acesso:</h2>
                     <input type="checkbox" name="Publico" id="acesso">
                     <label for="publico"> público</label>
+                
+                    <div onclick="uploadmanual()" id="upload">
+                        <label class="fas fa-cloud-upload-alt"></label>
+                    </div>
 
                 </div>
 
