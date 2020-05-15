@@ -27,10 +27,13 @@
         </div>
 
 
+        <!--Div pai PERFIL que contém tudo, aqui é a camada que aumenta o tamanho -->
         <div class="perfil">
 
+            <!-- Div com o ID de mesmo nome, aqui é a camada que acontece a animacão de esmaecer(opacidade 0>1) -->
             <div id ="perfil">
 
+                <!-- Essa é a div do lado A: lado que tem as informacões e conteúdo do usuário -->
                 <div id="ladoA">
                
                     <h1> Bem Vindo ao Seu Perfil</h1>
@@ -38,68 +41,87 @@
                     
                     <h2>informações da conta:</h2>
 
-                    <p> Nome de usuário: <span id="nomeUsuario">    nome    </span>  </p>
-                    <p> Entrou dia:      <span id="DataUsuario">    data    </span>  </p>
+                    <p> Nome de usuário: <span id="nomeUsuario">    //   </span>   </p>
+                    <p> Entrou dia:      <span id="DataUsuario">    //   </span>  </p>
 
                     <h2> Playlists </h2>
 
-                    <p> Quantidade de playlists: <span id="Qtdplaylists"> 2313 playlist</span></p>
-                    <p> Playlist mais tocada:    <span id="PMT"> nomenome</span></p>
+                    <p> Quantidade de playlists: <span id="Qtdplaylists"> //          </span></p>
+                    <p> Playlist mais tocada:    <span id="PMT">          //          </span></p>
                     
                     <h2>Suas músicas:</h2>
                     <p>Role para baixo caso não ache.</p>
 
+                    <!-- Aqui é um filtro do que vai aparecer na tabela. "Oculto" é que o modo default e o qual a tabela fica curta.
+                    "Playlist específica" é caso a pessoa coloque nome na playlist. Essa opcão virá depois (opcão de montar playlists). 
+                    Por enquanto DEVE ter Ordem Alfabética e todas as músicas/videos.-->
+
                     <select name="playlists" id="playlists">
-                        <option value="Oculto"> Ocultar </option>
-                        <option value="Tudo"> Todas as Músicas</option>
-                        <option value="Alfabetica"> Ordem Alfabética</option>
-                        <option value=""> playlist específica</option>
+
+                        <option value="Oculto">         Ocultar             </option>
+                        <option value="Tudo-musicas">   Todas as Músicas    </option>
+                        <option value="Tudo-videos">    Todos os videos     </option>
+                        <option value="Alfabetica">     Ordem Alfabética    </option>
+                        <option value="">               playlist específica </option>
+
                     </select>
 
-                    <table class="tabela">
-                        <tr class="linha-titulo"> <td>Artista/autor-video   </td> </tr>
-                        <tr class="linha">        <td>       //             </td> </tr>
+                    <!-- Tabela que será preenchida com o conteúdo. Ela tem uma scrollbar oculta, então a página sempre será do mesmo tamanho
+                    e ela poderá ser scrollada quando necessário -->
 
+                    <table class="tabela">
+                        <tr class="linha-titulo"> <td> Artista/autor-video   </td> </tr>
+                        <tr class="linha">        <td>        //             </td> </tr>
                     </table>
                     
                 </div>
                 
+                <!-- Lado B: parte da importacão de conteúdo. Ele pode ser música e video, obviamente.-->
+                
                 <div id="ladoB">
+
                     <h1>upload de conteúdo</h1>
                     <p id="subtitulo"> Importe conteúdo por link, ou do seu computador.  </p>
 
+                    <!--Div que importa de maneira MANUAL o conteúdo, ou seja, faz com que a pessoa navegue no seu computador e escolha.-->
                     <div class="up">
-                        <h2 class="imp"> Coloque o nome </h2>
+                        <h2 class="titulo"> Coloque o nome * </h2>
                         <input  id="nome" type="text">
 
                         <h2 class="imp">Uma breve descrição</h2>
                         <input id="desc" type="text">
                         
-                        <h2 class="imp">Selecione a mídia:</h2>
+                        <h2 class="imp">Selecione a mídia: *</h2>
                         <input type="file"  name="arquivo" id="arquivo">
 
-                        <div class="container-up">
+
+                        <p id="obg"> * Obrigatório</p>
+
+                        <!--Div que puxa os dados, esse div terá que ver se está tudo em ordem e chamar a funcão que da sua respectiva animacão no ONCLICK dela. 
+                            Note que está vazio (o onclick) por enquanto, faca a funcão das restricões, e chame as funcões que eu criei, por favor. Veja no css para mais detalhes.-->
+
+                        <div class="container-up" onclick="" >
                             <label id="icon-manual" class="fas fa-photo-video"></label>
                         </div>
+
                     </div>
 
+                    <!--DIV da importacão AUTOMÁTICA POR LINK: aqui poderemos importar o conteúdo por url. Mesmo esquema, a funcão que determina o comportamento do ícone está pronta, 
+                    só falta falar quando ela é para ser usada (criar restricões)-->
                     <div class="up">
-                        <h2 class="imp"> Ou importe por link:</h2>
-                        <input type="url" class="fas fa-link">
+                        <h2 class="titulo"> Ou importe por link:</h2>
+                        <input id="link-bar" type="url" class="fas fa-link">
 
-                        <div class="container-up">
-                            <label class="fas fa-link"></label>
+                        <!--Aqui é a div que está se saindo como botão, não me julgue pfpfpf-->
+                        <div class="container-up" onclick="">
+                            <label id="icon-link" class="fas fa-link"></label>
                         </div>
                     </div>
 
-                    <h2 class="imp"> Acesso:</h2>
-                    <input type="checkbox" name="Publico" id="acesso">
-                    <label for="publico"> público</label>
-                
-                    <div onclick="uploadmanual()" id="upload">
-                        <label class="fas fa-cloud-upload-alt"></label>
-                    </div>
-
+                    <!--O QUE EU QUERO DIZER COM "TEM QUE CRIAR RESTRICÕES"?
+                    
+                    significa que tem que criar o esquema/funcão a qual diz que "caso algo dê errado, 
+                    seja falha de importacão ou campo em branco, a funcão de erro equivalente deve ser chamada."-->
                 </div>
 
             </div>
@@ -107,6 +129,5 @@
         </div>
 
     </main>
-
 </body>
 </html>
