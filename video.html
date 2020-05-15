@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/video.css">
+    <script src="https://kit.fontawesome.com/782e4cfd7d.js" crossorigin="anonymous"></script>
+
+    <script src="js/video.js"></script>
+
+    <title> Omicron - Videos </title>
+</head>
+<body>
+
+    <nav>
+        <ul id="nav" class="navbar">
+            <li class="navbar-item fas fa-angle-left bv"></li>
+            <li class="navbar-item" onclick="navdiminui(), esmaecer(), perfil()" > Meu perfil </li>
+            <li class="navbar-item" onclick="navdiminui(), esmaecer(), musica()"> Músicas    </li>
+            <li class="navbar-item" onclick="navdiminui(), esmaecer(), video()" > Videos     </li>
+            <li class="navbar-item" onclick="navdiminui(), esmaecer(), login()"> Sair       </li>
+        </ul>
+    </nav>
+    
+    <main class="conteudo">
+
+        <div class="player">
+
+            
+
+        </div>
+
+        <div class="listagem ">
+
+            <div id="container">
+
+                    <div class="escolha">
+
+                        <h1> Omicron - Videos</h1>
+                        <P> Seu visualizador de mídia </P>
+
+                        <p id="sub"> Switch de player:</p>    
+                        <div class="selecao-player">
+                            <button id="" onclick="esmaecer(), video()" class="player-item fab fa-youtube"> </button>
+                            <span class="player-item fas fa-arrows-alt-h"></span>
+
+                            <button id="" onclick="esmaecer(), musica()" class="player-item fas fa-music"></button>
+                        </div>
+
+                    </div>
+
+                    <p class="desc"> Selecione o video na tabela abaixo para reproduzir. </p>
+
+                    <select name="playlists" id="playlists">
+                        <option value="Todos"> Todos </option>
+                        <option value="OrdemAlfabetica"> Ordem Alfabética</option>
+                    </select>
+
+                    <table class="tabela">
+                        <tr class="linha-titulo"> <td> Meus videos </td>  </tr>
+                        <tr class="linha">        <td>  //          </td>  </tr>
+                    </table>
+
+            </div>
+            
+        </div>
+
+    </main>
+
+</body>
+</html>

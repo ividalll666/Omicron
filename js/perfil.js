@@ -51,20 +51,54 @@ function sucesso_upload_link()
     setTimeout( function apagastatus(){document.getElementById('icon-link').style.animation = ''},1001);    
 }
 
+function navdiminui()
+{
+    document.getElementById('nav').style.animation = '.2s navbar-diminui'
+}
 
 //a funcão de ESMAECER *NÃO* DEVE SER CHAMADA quando clicar em nenhum dos dois botões de importacão, pois,
 //isso significaria que depois de importar, a pessoa seria direcionada a outra págiona e NÃO é isso que queremos
 //já que a pessoa pode querer fazer mais de uma importacão  
 
-//funcao para transicão de páginas
+//funcao para transicão de páginas: ela diminui a opacidade dos elementos
 function esmaecer()
 {
-    for(i = 0; i < 10; i++)
-    {
-        menu = document.getElementsByClassName('nav')[i]; 
-        menu.style.animation = '1s ease 0s normal forwards opc';
-    }
-
-    setTimeout( function outraPag(){location.href = 'paginicial.html';},1500);
-
+    document.getElementById('perfil').style.animation = '1s ease 0s normal forwards opc';        
 }
+
+//diminui a camada que estão os elementos
+function camada_diminui()
+{
+    document.getElementById('camadaperfil').style.animation = '2.2s perfil-reverse';
+}
+
+//diminui a navbar para iniciar a transicão
+function navdiminui()
+{
+    document.getElementById('nav').style.animation = '1.2s nav-reverse'
+}
+
+// muda para tela de login
+function login()
+{
+    setTimeout( function outraPag(){location.href = 'index.html';},2201);
+}
+
+//muda para a tela de video
+function video()
+{
+    setTimeout( function outraPag(){location.href = 'video.html';},2201);
+}
+
+//muda para a tela de musica
+function musica()
+{
+    setTimeout( function outraPag(){location.href = 'musica.html';},2201);
+}
+
+//muda pro perfil
+function perfil()
+{
+    setTimeout( function outraPag(){location.href = 'perfil.html';},2201);
+}
+

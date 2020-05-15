@@ -17,8 +17,7 @@ function esmaecer()
         menu.style.animation = '1s ease 0s normal forwards opc';
     }
 
-    setTimeout( function outraPag(){location.href = 'paginicial.html';},1500);
-
+    setTimeout( function outraPag(){location.href = 'index.html';},1500);
 }
 
 
@@ -46,18 +45,23 @@ function cadastro()
             {
                 document.getElementById('check').style.animationName = 'negativo';
                 document.getElementById('senha1').style.animation = '2s erro';
+                setTimeout( function apagastatus(){document.getElementById('senha1').style.animation = ''},2001);
+
                 document.getElementById('senha2').style.animation = '2s erro';
+                setTimeout( function apagastatus(){document.getElementById('senha2').style.animation = ''},2001);
             }
         }
 
         else
         {
             document.getElementById('senha1').style.animation = '2s erro';
+            setTimeout( function apagastatus(){document.getElementById('senha1').style.animation = ''},2001);
         }
     }
     else
     {
         document.getElementById('usuario').style.animation = '2s erro';
+        setTimeout( function apagastatus(){document.getElementById('usuario').style.animation = ''},2001);
     }
 
 }

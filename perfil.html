@@ -14,9 +14,13 @@
 <body>
 
     <nav>
-        <ul class="navbar">
-            <li class="navbar-item fas fa-angle-left bv"></li>
-            <li class="navbar-item bv"></li>
+        <ul id="nav" class="navbar">
+            <li class="navbar-item fas fa-angle-left"></li>
+            <li class="navbar-item" onclick="camada_diminui(), navdiminui(), esmaecer(), perfil()" > Meu perfil </li>
+            <li class="navbar-item" onclick="camada_diminui(), navdiminui(), esmaecer(), musica()"> Músicas    </li>
+            <li class="navbar-item" onclick="camada_diminui(), navdiminui(), esmaecer(), video()" > Videos     </li>
+            <li class="navbar-item" onclick="camada_diminui(), navdiminui(), esmaecer(), login()"> Sair       </li>
+
         </ul>
     </nav>
     
@@ -28,7 +32,7 @@
 
 
         <!--Div pai PERFIL que contém tudo, aqui é a camada que aumenta o tamanho -->
-        <div class="perfil">
+        <div id="camadaperfil" class="perfil">
 
             <!-- Div com o ID de mesmo nome, aqui é a camada que acontece a animacão de esmaecer(opacidade 0>1) -->
             <div id ="perfil">

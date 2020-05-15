@@ -24,6 +24,17 @@ function cadastro()
     setTimeout( function outraPag(){location.href = 'cadastro.html';},1100);
 }
 
+function navdiminui()
+{
+    document.getElementById('nav').style.animation = '.2s navbar-diminui';
+}
+
+
+function login()
+{
+    setTimeout( function outraPag(){location.href = 'index.html';},1100);
+}
+
 function video()
 {
     setTimeout( function outraPag(){location.href = 'video.html';},1100);

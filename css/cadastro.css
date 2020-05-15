@@ -83,10 +83,6 @@
     margin-bottom: 0px;
 }
 
-.sub
-{
-    margin-bottom: 8%;
-}
 
 input.navbar-item
 {
@@ -132,29 +128,17 @@ input.navbar-item
 
 .btn
 {
-    margin-top: 10%;
+    margin-top: 2%;
     width: 0%;
-
     transition: .6s;
-
     color: #ee4540;
-
     border: 0px;
-
-
     font-size: 1.2rem;
-
-}
-
-
-.btn
-{
     position: relative;
     overflow: hidden;
     width: 50%;
     z-index: 5;
 }
-
 .btn:before 
 {
     content: '';
@@ -214,6 +198,8 @@ input.navbar-item
     border-radius: 5px;
     width: 50%;
     margin-top: 5%;
+    margin-bottom: 5%;
+
     text-align: center;
     font-weight: bold;
 

@@ -27,6 +27,19 @@
     }
 }
 
+@keyframes opcinicio
+{
+    0%
+    {
+        opacity: 0;
+    }
+
+    100%
+    {
+        opacity: 1;
+    }
+}
+
 
 .navbar
 {
@@ -45,20 +58,21 @@
 
     font-size: 1.7rem;
 
-    width: 10%;
+    width: 40%;
     height: 100%;
 
     transition: .8s;
 
     z-index: 5;
 
-    animation: navbar-interaction 1s;
-
+    opacity: 1;
 }
 
 .navbar-title
 {
     color: white;
+    animation: opcinicio 2s;
+
 }
 
 input.navbar-item
@@ -66,21 +80,10 @@ input.navbar-item
     color: #801336;
 }
 
-.navbar:hover 
-{
-    width: 40%;
-    cursor: pointer;
-}
 
 .navbar:hover .fa-angle-left
 {
     transform: rotate(-90deg);
-}
-
-
-.navbar:hover .navbar-item
-{
-    opacity: 1;
 }
 
 .navbar-item
@@ -88,26 +91,23 @@ input.navbar-item
     color: white;
     padding: 3%;
 
-    opacity:0 ;
+    opacity:1;
+    animation: opcinicio 2s;
 
     transition: .5s;
 }
 
 .bar
 {
-    width: 10%;
+    width: 50%;
     text-align: center;
 }
 
-.navbar:hover .bar
-{
-    width: 50%;
-}
 
 .btn
 {
     margin-top: 3%;
-    width: 0%;
+    width: 50%;
 
     transition: .6s;
 
@@ -117,13 +117,8 @@ input.navbar-item
 
 
     font-size: 1.2rem;
-
 }
 
-.navbar:hover .btn
-{
-    width: 50%;
-}
 
 .btn
 {
@@ -149,10 +144,6 @@ input.navbar-item
     z-index: -1;
 
     transition-duration: .5s;
-
-
-
-
 }
 
 .btn:hover::before
@@ -160,7 +151,6 @@ input.navbar-item
     height: 100%;
 
 }
-
 
 .btn:hover 
 {
@@ -235,6 +225,11 @@ input.navbar-item
     {
         transform: translateY(-200%);   
     }
+}
+
+#atalho:hover
+{
+    cursor: pointer;
 }
 
 
