@@ -17,7 +17,6 @@
     --video-color-one:#45046a;
     --video-color-two:#45046a;
     --video-color-three:#45046a;
-
 }
 
 .navbar
@@ -44,7 +43,6 @@
     z-index: 5;
 
     /* animation: navbar-interaction 3s normal; */
-
 }
 
 .navbar:hover
@@ -148,7 +146,15 @@ main.conteudo
 {
     grid-column: 1/2;
     background-color:  var(--color-one);
+}
 
+video
+{
+
+    width: 100%;
+    height: 100%;
+    padding: 2%; 
+    object-fit:cover;
 }
 
 /* CONFIGS DA LISTAGEM DE MÚSICAS */

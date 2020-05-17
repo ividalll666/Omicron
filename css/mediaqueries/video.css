@@ -1,0 +1,29 @@
+@media (min-width: 100px) and (max-width: 700px)
+{
+    :root
+    {
+        font-size: 3vw;
+    }
+
+    .navbar:hover
+    {
+        width: 90%;
+    }
+
+    main .conteudo
+    {
+        grid-template-rows: 1fr 2fr;
+    }
+
+    .player
+    {
+        grid-column:1/3 ;
+        grid-row: 1/2;
+    }
+
+    .listagem
+    {
+        grid-column: 1/3;
+        grid-row: 2/3;
+    }
+}
